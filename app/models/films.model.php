@@ -45,7 +45,7 @@ class FilmsModel{
         $query->execute([$id]);
     }
     private function uploadImage($image){
-        $target = 'img/task/' . uniqid() . '.jpg';
+        $target = 'img/films/' . uniqid() . '.jpg';
         move_uploaded_file($image, $target);
         return $target;
     }
