@@ -2,7 +2,7 @@
 class FilmsModel{
     private $db;
 
-    function __construct(){
+    public function __construct(){
         $this->db = new PDO('mysql:host=localhost;' . 'dbname=películas;charset=utf8', 'root', '');
     }
     function getFilmsByGenre($id){

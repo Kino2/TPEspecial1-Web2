@@ -16,8 +16,8 @@ class GenresModel{
         $query->execute([$genre]);
     }
     function editGenre($genre,$id){
-        $query = $this->db->prepare("UPDATE generos SET genero = '$genre' WHERE id_genero ='$id'");
-        $query->execute();
+        $query = $this->db->prepare("UPDATE generos SET genero = ? WHERE id_genero = ?");
+        $query->execute([$genre, $id]);
     }
     function deleteGenre($id){
         $query = $this->db->prepare('DELETE FROM generos WHERE id_genero = ?');
