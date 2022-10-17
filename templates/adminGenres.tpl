@@ -7,6 +7,9 @@
 <br>
 <div class="row">
 <h3>Editar o borrar género:</h3>
+<div class="alert alert-danger mt-3">
+¡ALERTA! Se borrarán todas las películas que pertenezcan al género que se borre
+</div>
 {foreach from=$genres item=$genre}
   <div class="col-md-2 mt-2">
       <div class="card bg-light shadow">
