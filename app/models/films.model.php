@@ -14,8 +14,8 @@ class FilmsModel{
     function getFilms(){
         $query = $this->db->prepare("SELECT a.*, b.* FROM peliculas a INNER JOIN generos b ON a.id_genero_fk = b.id_genero");
         $query->execute();
-        $peliculas = $query->fetchAll(PDO::FETCH_OBJ);
-        return $peliculas;
+        $films = $query->fetchAll(PDO::FETCH_OBJ);
+        return $films;
     }
     function getFilm($id){
         $query = $this->db->prepare("SELECT* FROM peliculas WHERE id_pelicula = ?");
